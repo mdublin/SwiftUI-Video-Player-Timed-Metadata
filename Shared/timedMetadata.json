@@ -1,0 +1,142 @@
+{
+  "00:00": {
+    "playerOne": {
+      "red": 0,
+      "blue": 2
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 1
+    }
+  },
+  "00:06": {
+    "playerOne": {
+      "red": 0,
+      "blue": 3
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 1
+    }
+  },
+  "00:10": {
+    "playerOne": {
+      "red": 0,
+      "blue": 5
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 2
+    }
+  },
+  "00:14": {
+    "playerOne": {
+      "red": 0,
+      "blue": 5
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 3
+    }
+  },
+  "00:17": {
+    "playerOne": {
+      "red": 0,
+      "blue": 7
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 3
+    }
+  },
+  "00:24": {
+    "playerOne": {
+      "red": 0,
+      "blue": 7
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 4
+    }
+  },
+  "00:34": {
+    "playerOne": {
+      "red": 0,
+      "blue": 8
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 4
+    }
+  },
+  "00:42": {
+    "playerOne": {
+      "red": 0,
+      "blue": 8
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 5
+    }
+  },
+  "00:44": {
+    "playerOne": {
+      "red": 1,
+      "blue": 11
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 6
+    }
+  },
+  "00:54": {
+    "playerOne": {
+      "red": 1,
+      "blue": 0
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 1
+    }
+  },
+  "01:01": {
+    "playerOne": {
+      "red": 1,
+      "blue": 0
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 2
+    }
+  },
+  "01:05": {
+    "playerOne": {
+      "red": 1,
+      "blue": 2
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 4
+    }
+  },
+  "01:14": {
+    "playerOne": {
+      "red": 1,
+      "blue": 2
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 5
+    }
+  },
+  "01:18": {
+    "playerOne": {
+      "red": 1,
+      "blue": 4
+    },
+    "playerTwo": {
+      "red": 0,
+      "blue": 5
+    }
+  }
+}
