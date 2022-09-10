@@ -84,6 +84,21 @@ struct ButtonText: View {
   }
 }
 
+
+
+struct MatchText: View {
+  var match: Int
+
+  var body: some View {
+    Text(String(match))
+      .bold()
+      .kerning(-0.2)
+      //.foregroundColor(Color("TextColor"))
+      .foregroundColor(.purple)
+      .font(.title3)
+  }
+}
+
 struct ScoreText: View {
   var score: Int
 
@@ -91,7 +106,8 @@ struct ScoreText: View {
     Text(String(score))
       .bold()
       .kerning(-0.2)
-      .foregroundColor(Color("TextColor"))
+      //.foregroundColor(Color("TextColor"))
+      .foregroundColor(.green)
       .font(.title3)
   }
 }
@@ -124,7 +140,7 @@ struct DateText: View {
 struct BigBoldText: View {
   let text: String
 
-  var body: some View {
+    var body: some View {
     Text(text.uppercased())
       .kerning(2.0)
       .foregroundColor(Color("TextColor"))

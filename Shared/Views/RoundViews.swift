@@ -5,7 +5,6 @@
 //  Created by Matt Dublin on 8/4/22.
 //
 
-import SwiftUI
 
 import SwiftUI
 
@@ -69,10 +68,7 @@ struct RoundedTextView: View {
       .overlay(
         Circle()
           .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth))
-      
-      
-      
-              .background(playerBackgroundColor)
+      .background(playerBackgroundColor)
   }
 
 }

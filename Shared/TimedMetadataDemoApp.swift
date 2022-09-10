@@ -12,6 +12,7 @@ struct TimedMetadataDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //ProfileViewWithOverlay()
         }
     }
 }

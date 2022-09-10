@@ -11,6 +11,8 @@ struct LeaderboardView: View {
     
     @Binding var playerOneScore: Int
     @Binding var playerTwoScore: Int
+    @Binding var playerOneMatch: Int
+    @Binding var playerTwoMatch: Int
 
 
     
@@ -25,8 +27,8 @@ struct LeaderboardView: View {
           //RowView(index: 1, score: playerOneScore, date: Date(), playerName: "ZHENDONG")
           //RowView(index: 2, score: playerTwoScore, date: Date(), playerName: "MOREGARD")
           
-          RowView(index: 1, score: playerOneScore, date: Date(), playerColor: .red)
-          RowView(index: 2, score: playerTwoScore, date: Date(), playerColor: .blue)
+          RowView(index: 1, match: playerOneMatch, score: playerOneScore, playerColor: .red)
+          RowView(index: 2, match: playerTwoMatch, score: playerTwoScore, playerColor: .blue)
       }
     }
   }
@@ -34,8 +36,9 @@ struct LeaderboardView: View {
 
 struct RowView: View {
   let index: Int
+  let match: Int
   let score: Int
-  let date: Date
+  //let date: Date
   //let playerName: String
   let playerColor: Color
 
@@ -51,12 +54,16 @@ struct RowView: View {
        // .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
         
         
-      ScoreText(score: score)
+      MatchText(match: match)
         .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
         
       Spacer()
-      DateText(date: date)
-        .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+        
+      //DateText(date: date)
+      //  .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+      ScoreText(score: score)
+        
+        .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
     }
     .background(
       RoundedRectangle(cornerRadius: .infinity)
@@ -64,14 +71,17 @@ struct RowView: View {
     )
     .padding(.leading)
     .padding(.trailing)
-    .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
+      
+   // .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
   }
 }
 
 struct HeaderView: View {
   var body: some View {
-    ZStack {
-      BigBoldText(text: "Leaderboard")
+      ZStack {
+          BigBoldText(text: "Leaderboard")
+        
+    /*
       HStack {
         Spacer()
         Button(action: {}) {
@@ -79,6 +89,8 @@ struct HeaderView: View {
             .padding(.trailing)
         }
       }
+    */
+        
     }
   }
 }
@@ -91,31 +103,36 @@ struct LabelView: View {
       //  .frame(width: Constants.General.roundedViewLength)
       //Spacer()
         
-      LabelText(text: "Score")
+      LabelText(text: "")
           .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
       Spacer()
         
-      LabelText(text: "Score")
+      LabelText(text: "Match")
         .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
       Spacer()
         
-      LabelText(text: "Date")
-        .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+      //LabelText(text: "Score")
+      //  .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+        
+        LabelText(text: "Score")
+          .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
     }
     .padding(.leading)
     .padding(.trailing)
+    
+    
     .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
   }
 }
 
 struct LeaderboardView_Previews: PreviewProvider {
   static var previews: some View {
-      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8))
-      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8))
+      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8), playerOneMatch: .constant(0), playerTwoMatch: .constant(0))
+      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8), playerOneMatch: .constant(0), playerTwoMatch: .constant(0))
       .previewLayout(.fixed(width: 568, height: 320))
-      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8))
+      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8), playerOneMatch: .constant(0), playerTwoMatch: .constant(0))
       .preferredColorScheme(.dark)
-      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8))
+      LeaderboardView(playerOneScore: .constant(12), playerTwoScore: .constant(8), playerOneMatch: .constant(0), playerTwoMatch: .constant(0))
       .preferredColorScheme(.dark)
       .previewLayout(.fixed(width: 568, height: 320))
   }
