@@ -27,8 +27,8 @@ struct ScoreBoard: View {
 struct TeamHeaderRow: View {
   var body: some View {
       HStack(alignment: .center) {
-          Text("Home").font(.largeTitle).underline().frame(alignment: .leading).padding(20)
-          Text("Visitor").font(.largeTitle).underline().frame(alignment: .trailing).padding(20)
+          Text("Home").font(.title).underline().frame(alignment: .leading).padding(10)
+          Text("Visitor").font(.title).underline().frame(alignment: .trailing).padding(10)
       }
   }
 }
@@ -41,9 +41,9 @@ struct ScoreRow: View {
     
   var body: some View {
       HStack {
-              Text(String(homeScore)).font(.largeTitle).frame(alignment: .center).padding(20)
+              Text(String(homeScore)).font(.title).frame(alignment: .center).padding(20)
               
-              Text(String(visitorScore)).font(.largeTitle).frame(alignment: .center).padding(20)
+              Text(String(visitorScore)).font(.title).frame(alignment: .center).padding(20)
           }
   }
 }

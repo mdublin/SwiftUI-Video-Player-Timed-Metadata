@@ -35,9 +35,7 @@ class TimedMetadataParser {
     }
 
 
-    //static var arrayOfTimeRanges = [Double]()
     static var arrayOfJSONData = [TimedMetadata]()
-    
     
     
     static func readLocalFile(forName name: String) -> Data? {
@@ -72,14 +70,7 @@ class TimedMetadataParser {
             return nil
         }
         
-        
-        /*
-        if let jsonMetadata = try? decoder.decode(GameMetadata.self, from: jsonData) {
-            arrayOfJSONData = jsonMetadata.results
-            return arrayOfJSONData
-        }
-        */
-        
+
         return nil
         
     }
@@ -90,7 +81,7 @@ class TimedMetadataParser {
         
         var arrayOfTimeRanges = [Double]()
         
-        for (index, item) in jsonDataResults.enumerated() {
+        for (_, item) in jsonDataResults.enumerated() {
             if arrayOfTimeRanges.contains(item.start) {
             } else {
                 arrayOfTimeRanges.append(item.start)

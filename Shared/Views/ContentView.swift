@@ -127,7 +127,6 @@ struct PlayerTimeView: View {
     
     
     
-    
     @State var firstBaseLoaded: Bool = false
     @State var secondBaseLoaded: Bool = false
     @State var thirdBaseLoaded: Bool = false
@@ -138,10 +137,6 @@ struct PlayerTimeView: View {
       
     var body: some View {
   
-   
-        
-         
-        
         //within each block is where the current time is used to pull the correct data out of the collection of timed metadata
         
         // each needs to search through parsedJSONData for the start time match, then update the UI
@@ -150,7 +145,6 @@ struct PlayerTimeView: View {
             
            
             for (_, item) in parsedJSONData.enumerated() {
-                
                 
                 let currentTimeStartRangeCheck = time.rounded(.towardZero) as Double >= item.start.rounded(.towardZero) as Double
                 
@@ -161,9 +155,9 @@ struct PlayerTimeView: View {
                     
                     self.homeScore = item.metadata.scores.home
                     self.visitorScore = item.metadata.scores.visitor
+                    break
                 }
             }
-            
         }
         
         
@@ -184,7 +178,7 @@ struct PlayerTimeView: View {
                     self.firstBaseLoaded = (item.metadata.bases[0] != 0)
                     self.secondBaseLoaded = (item.metadata.bases[1] != 0)
                     self.thirdBaseLoaded = (item.metadata.bases[2] != 0)
-                    
+                    break
                 }
             }
         }
@@ -213,15 +207,13 @@ struct ContentView: View {
             }
             GeometryReader { geometry in
                 VStack {
-          
+                    
+                    Text("Softball Game").font(.largeTitle).padding(0)
+                    
                     PlayerTimeView(timeObserver: PlayerTimeObserver(player: videoPlayer), timeBoundaryObserver:PlayerTimeBoundaryObserver(player: videoPlayer, GameTimes: boundaryTimesFromMetadata)).frame(alignment: .bottomTrailing)
                     
                 }
-            }
-            
-
-            
-            
+              }
             }
         .padding()
         .foregroundColor(.primary)
